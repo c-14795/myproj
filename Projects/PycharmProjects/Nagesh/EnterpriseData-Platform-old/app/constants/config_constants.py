@@ -1,0 +1,8 @@
+SOURCE = "source"
+TARGET = "target"
+DB_NAME = "db_name"
+PROGRAM_ID = "program_id"
+SCHEMA = "schema"
+TABLE = "table"
+COLS = "cols"
+VALUES = "values"

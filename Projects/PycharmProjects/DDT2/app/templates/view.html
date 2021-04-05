@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AllTasks</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+    ._task:link, ._task:visited {
+    background-color:#6cb78f;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+._task:hover, ._task:active {
+    background-color: green;
+}
+h3{
+    position:absolute;
+    bottom:0;
+    right:0;
+}
+
+
+
+    </style>
+    <script>
+    $(document).ready(function(){
+        $("button").click(function(){
+            var _id = $(this).parent().parent().find('td:eq(1)').text()
+            var status = $(this).parent().parent().find('td:eq(3)').text()
+            if(status != "Completed"){
+            $.ajax({
+        url: 'update_task',
+        type: 'POST',
+        data: JSON.stringify({'id':_id}),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: function(data) {
+                console.log(data);
+                if (data['RESP'] != "Success") {
+                alert("updating task failed");
+                }
+                else
+                {
+                window.location.href=window.location.href;
+                }
+            }
+        });
+        }
+        else{
+            alert("Task is already completed");
+        }
+
+    });});
+// Set the date we're counting down to
+var countDownDate = new Date("Jul 18, 2018 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+    // Get todays date and time
+    var now = new Date().getTime();
+
+    // Find the distance between now an the count down date
+    var distance = countDownDate - now;
+
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in an element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+
+    // If the count down is over, write some text
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "TIME UP"
+    }
+}, 1000);
+    </script>
+</head>
+<body>
+<br>
+<a href="{{ url_for('logout') }}" style="float:right;margin-right:10px" class="btn btn-default">Logout</a>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Component Owner</th>
+                <th>TaskId</th>
+                <th>Description</th>
+                <th>TaskStatus</th>
+                <th>Expected Start time</th>
+                <th>Expected End time</th>
+                <th>Actual Start time</th>
+                <th>Actual End time</th>
+                <th>Elapsed Time</th>
+                <th>UpdateTask</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for task in tasks %}
+            <tr>
+                <td>{{task.user_id}}</td>
+                <td>{{task.id}}</td>
+                <td>{{task.desc}}</td>
+                <td>{{task.status}}</td>
+                <td>{{task.sch_strt_tm}}</td>
+                <td>{{task.task_completion_time}}</td>
+                <td>{{task.act_st_tm}}</td>
+                <td>{{task.act_end_tm}}</td>
+                <td>{{task.minutes_elapsed}}</td>
+                <td><button class="{{task.btn_cls}}">{{task.btn}}</button>
+                </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+
+<center><a class="_task" href="{{ url_for('task') }}">Create a task</a></center>
+<h3 id="demo"></h3>
+</body>
+</html>

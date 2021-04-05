@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Tasks</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+    function getData(){
+        var data = prompt("Please enter your task description");
+        if (data == null){
+        if(confirm("Do you want to continue with out any description"))
+        {
+        return ""
+        }
+        else
+
+        {
+        return getData()
+        }
+
+        }
+        return data
+    }
+    $(document).ready(function(){
+        $(".update").click(function(){
+            var _id = $(this).parent().parent().find('td:eq(0)').text()
+            var status = $(this).parent().parent().find('td:eq(2)').text()
+            if(status != "Completed"){
+            $.ajax({
+        url: 'update_task',
+        type: 'POST',
+        data: JSON.stringify({'id':_id}),
+        contentType: 'application/json; charset=utf-8',
+        dataType: 'json',
+        async: true,
+        success: function(data) {
+                console.log(data);
+                if (data['RESP'] != "Success") {
+                alert("updating task failed");
+                }
+                else
+                {
+                window.location.href=window.location.href;
+                }
+            }
+        });
+        }
+        else{
+            alert("Task is already completed");
+        }
+
+    });
+    $(".delete").click(function(){
+        var _id = $(this).parent().parent().find('td:eq(0)').text()
+        $.ajax({
+    url: 'delete_task',
+    type: 'POST',
+    data: JSON.stringify({'id':_id}),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    async: true,
+    success: function(data) {
+                console.log(data);
+                if (data['RESP'] != "Success") {
+                alert("deleting task failed");
+                }
+                else
+                {
+                window.location.href=window.location.href;
+                }
+            }
+});
+});
+
+
+$(".add_task").click(function(){
+        var desc = getData()
+
+
+        $.ajax({
+    url: 'create_task',
+    type: 'POST',
+    data: JSON.stringify({'task_description':desc}),
+    contentType: 'application/json; charset=utf-8',
+    dataType: 'json',
+    async: true,
+    success: function(data) {
+                console.log(data);
+                if (data['RESP'] != "Success") {
+                alert("creating task failed");
+                }
+                else
+                {
+                window.location.href=window.location.href;
+                }
+            }
+});
+});
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+    <style type="text/css" media="screen">
+
+table{
+border-collapse:collapse;
+border:1px solid #000000;
+}
+
+table td,th{
+border:1px solid #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+<center>
+    <button class="add_task">Add a new task</button>
+    <br><br>
+    <table>
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Description</th>
+            <th>TaskStatus</th>
+            <th>MarkAsComplete</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.id}}</td>
+            <td>{{task.desc}}</td>
+            <td>{{task.status}}</td>
+            <td>
+                <button type="button" class="update">MarkAsComplete</button>
+            </td>
+            <td>
+                <button type="button" class="delete">DeleteTask</button>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+<p>Description is limited to hundred  chars, anything more than that will be trimmed.</p>
+</center>
+</body>
+</html>

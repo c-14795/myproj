@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+    <success>true</success>
+    <result_count>1</result_count>
+    <results_per_page>20</results_per_page>
+    <page>1</page>
+    <data>
+        <Order>
+            <id>107391769</id>
+            <is_cod>0</is_cod>
+            <order_type/>
+            <created>2015-06-02 00:00:00</created>
+            <modified>2015-06-03 17:20:39</modified>
+            <gross_value>521</gross_value>
+            <fees_value/>
+            <channel_id>1703</channel_id>
+            <parent_id/>
+            <shipping_value>0</shipping_value>
+            <customer_id>81259975</customer_id>
+            <shipping_address_id>2716909</shipping_address_id>
+            <order_status_id>2440737</order_status_id>
+            <financial_status_id>2</financial_status_id>
+            <fulfillment_status_id>3</fulfillment_status_id>
+            <marketplace_status/>
+            <shipping_batch_id>22549</shipping_batch_id>
+            <manifest_id/>
+            <currency_id>63</currency_id>
+            <executed_shipping_method>DTDC</executed_shipping_method>
+            <tracking_number>B19152417</tracking_number>
+            <stock_adjusted>1</stock_adjusted>
+            <order_reference>301151513</order_reference>
+            <selected_shipping_method/>
+            <uuid>584770205556e897c666a270219</uuid>
+            <unread>1</unread>
+            <dispatch_date>2015-06-03 11:50:23</dispatch_date>
+            <bt_fulfillment_status_id>3</bt_fulfillment_status_id>
+            <bt_order_status_id/>
+            <bt_financial_status_id/>
+            <remittance_date/>
+            <remittance_note/>
+            <remitted_value/>
+            <invoice_prefix/>
+            <invoice_number/>
+            <courier_company_id>9</courier_company_id>
+            <ship_label_path/>
+            <courier_status_id/>
+            <courier_status_raw/>
+            <courier_tracking_attempts>0</courier_tracking_attempts>
+            <courier_tracked_on/>
+            <warehouse_id>1</warehouse_id>
+            <tax_rule_id/>
+            <weight_gm/>
+            <length_mm/>
+            <breadth_mm/>
+            <height_mm/>
+            <problem_reason/>
+            <replacement_order_id/>
+            <replacement_pending/>
+            <created_on/>
+            <vat_forms></vat_forms>
+            <marketplace_fulfilled>true</marketplace_fulfilled>
+            <is_cancellable_on_channel>false</is_cancellable_on_channel>
+            <vatlinks></vatlinks>
+        </Order>
+        <Channel>
+            <id>1703</id>
+            <email/>
+            <email_from_name/>
+            <email_bcc/>
+            <invoice_template/>
+            <title>pepper fry</title>
+            <stock_sync>1</stock_sync>
+            <ChannelType>
+                <favicon_path>/img/icons/icon_offline_store.png</favicon_path>
+                <standard_tag>offline_store</standard_tag>
+            </ChannelType>
+        </Channel>
+        <Customer>
+            <id>81259975</id>
+            <salutation/>
+            <first_name>zubin mistry</first_name>
+            <last_name></last_name>
+            <email/>
+            <nickname/>
+            <created>0000-00-00 00:00:00</created>
+            <modified>0000-00-00 00:00:00</modified>
+            <customer_reference/>
+            <channel_id>1703</channel_id>
+            <full_name>zubin mistry</full_name>
+            <company_name/>
+        </Customer>
+        <ShippingAddress>
+            <id>2716909</id>
+            <address_line1>202 new cd baug . next to city center shopping mall in sai baba enclave compound</address_line1>
+            <address_line2>Goregaon West</address_line2>
+            <address_line3></address_line3>
+            <city>Mumbai</city>
+            <state>Maharashtra</state>
+            <country>India</country>
+            <country_code/>
+            <zip>400062</zip>
+            <address_name>zubin mistry</address_name>
+            <phone>9870770880</phone>
+        </ShippingAddress>
+        <Currency>
+            <id>63</id>
+            <abbreviation>INR</abbreviation>
+            <name>Indian Rupee</name>
+            <symbol>₹</symbol>
+            <created>0000-00-00 00:00:00</created>
+            <modified>2015-09-15 09:24:56</modified>
+            <rate>66.3212</rate>
+            <priority>0</priority>
+        </Currency>
+        <OrderStatus>
+            <id>2440737</id>
+            <title>open</title>
+        </OrderStatus>
+        <FinancialStatus>
+            <id>2</id>
+            <title>paid</title>
+        </FinancialStatus>
+        <FulfillmentStatus>
+            <id>3</id>
+            <title>shipped</title>
+        </FulfillmentStatus>
+        <Manifest>
+            <id/>
+            <manifest_reference/>
+            <created/>
+            <courier_company/>
+            <picked_up_at/>
+            <courier_boy_name/>
+            <courier_boy_phone/>
+            <company_id/>
+            <schedule_pickup_token/>
+        </Manifest>
+        <CourierCompany>
+            <id>9</id>
+            <title>Dtdc</title>
+            <accepted_names>["dtdc","DTDC","Dtdc","dtdc\/dtdc"]</accepted_names>
+            <standard_tag>dtdc</standard_tag>
+            <manifest_report_type_id>7</manifest_report_type_id>
+        </CourierCompany>
+        <CourierStatus>
+            <id/>
+            <title/>
+        </CourierStatus>
+        <Warehouse>
+            <id>1</id>
+            <title>default warehouse</title>
+            <created>0000-00-00 00:00:00</created>
+            <modified>2014-08-14 09:44:34</modified>
+            <company_id>2</company_id>
+            <is_default>1</is_default>
+            <warehousing_account_id/>
+            <last_polled>0000-00-00 00:00:00</last_polled>
+            <external_warehouse_code/>
+            <restricted_to_channel_id/>
+        </Warehouse>
+        <TaxRule>
+            <id/>
+            <title/>
+            <company_id/>
+            <condition_field/>
+            <condition_value/>
+            <tax_percentage/>
+            <created/>
+            <is_default/>
+        </TaxRule>
+        <item_titles_orders>
+            <id>109427330</id>
+            <order_id>107391769</order_id>
+            <quantity>1</quantity>
+            <tracking_ref/>
+            <item_title_id>18355001</item_title_id>
+            <gross_value>521</gross_value>
+            <item_url/>
+            <number/>
+            <item_options/>
+            <tax_rule_id>1</tax_rule_id>
+            <shipping_batch_id/>
+            <manifest_id/>
+            <packer_id/>
+            <executed_shipping_method/>
+            <tracking_number/>
+            <courier_routing_code/>
+            <selected_shipping_method/>
+            <dispatch_date>0000-00-00 00:00:00</dispatch_date>
+            <courier_status_id/>
+            <courier_company_id/>
+            <courier_tracked_on>0000-00-00 00:00:00</courier_tracked_on>
+            <courier_status_raw/>
+            <courier_tracking_attempts>0</courier_tracking_attempts>
+            <ship_label_path/>
+            <fulfillment_status_id/>
+            <shipping_value/>
+            <sub_order_reference/>
+            <warehouse_id/>
+            <stock_flag>1</stock_flag>
+            <dispatch_by_date>0000-00-00 00:00:00</dispatch_by_date>
+        </item_titles_orders>
+        <item_titles>
+            <id>18355001</id>
+            <title>Light Fish Emerald Green Glass Cone Candle Holder</title>
+            <sku_id/>
+            <sku_code_from_channel>LFCM05</sku_code_from_channel>
+            <company_id>2</company_id>
+            <number/>
+        </item_titles>
+        <skus>
+            <id/>
+            <readable_name/>
+            <custom_code/>
+            <image_path/>
+            <image_thumb_path/>
+            <input_image_path/>
+            <company_id/>
+            <_in_stock_quantity/>
+            <awaiting_dispatch_quantity/>
+            <length_mm/>
+            <breadth_mm/>
+            <height_mm/>
+            <weight_gm/>
+            <bundle_id/>
+            <is_disabled/>
+            <is_bundle/>
+            <default_cost_price/>
+            <least_selling_price/>
+            <created/>
+            <modified/>
+            <currency_id/>
+            <is_low_stock/>
+            <low_stock_level/>
+            <product_id/>
+            <stock_sync/>
+            <product_category_id/>
+            <tax_rule_id/>
+            <style_code/>
+        </skus>
+        <O>
+            <ProductId/>
+        </O>
+        <ItemTitle>
+            <id>18355001</id>
+            <title>Light Fish Emerald Green Glass Cone Candle Holder</title>
+            <sku_id/>
+            <sku_code_from_channel>LFCM05</sku_code_from_channel>
+            <company_id>2</company_id>
+            <number/>
+            <ItemTitlesOrder>
+                <id>109427330</id>
+                <order_id>107391769</order_id>
+                <quantity>1</quantity>
+                <tracking_ref/>
+                <item_title_id>18355001</item_title_id>
+                <gross_value>521</gross_value>
+                <item_url/>
+                <number/>
+                <item_options/>
+                <tax_rule_id>1</tax_rule_id>
+                <shipping_batch_id/>
+                <manifest_id/>
+                <packer_id/>
+                <executed_shipping_method/>
+                <tracking_number/>
+                <courier_routing_code/>
+                <selected_shipping_method/>
+                <dispatch_date>0000-00-00 00:00:00</dispatch_date>
+                <courier_status_id/>
+                <courier_company_id/>
+                <courier_tracked_on>0000-00-00 00:00:00</courier_tracked_on>
+                <courier_status_raw/>
+                <courier_tracking_attempts>0</courier_tracking_attempts>
+                <ship_label_path/>
+                <fulfillment_status_id/>
+                <shipping_value/>
+                <sub_order_reference/>
+                <warehouse_id/>
+                <stock_flag>1</stock_flag>
+                <dispatch_by_date>0000-00-00 00:00:00</dispatch_by_date>
+                <TaxRule>
+                    <id>1</id>
+                    <title>VAT 5%</title>
+                    <tax_percentage>5</tax_percentage>
+                </TaxRule>
+            </ItemTitlesOrder>
+            <Sku>
+                <id/>
+                <custom_code/>
+                <style_code/>
+                <readable_name/>
+                <length_mm/>
+                <breadth_mm/>
+                <height_mm/>
+                <weight_gm/>
+                <default_cost_price/>
+            </Sku>
+            <Product>
+                <title/>
+            </Product>
+            <brand>Raymond</brand>
+        </ItemTitle>
+    </data>
+</root>

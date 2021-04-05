@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+<RestResponse>
+<messages>
+Country found matching code [IN].</messages>
+<result>
+<name>India</name>
+<alpha2_code>IN</alpha2_code>
+<alpha3_code>IND</alpha3_code>
+</result>
+</RestResponse>
+
+</root>

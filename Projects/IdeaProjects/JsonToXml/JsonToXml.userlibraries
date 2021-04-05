@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Maven: junit:junit:3.8.1">
+    <archive path="/home/c14795/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar" />
+  </library>
+  <library name="Maven: org.json:json:20160810">
+    <archive path="/home/c14795/.m2/repository/org/json/json/20160810/json-20160810.jar" />
+  </library>
+  <library name="Maven: com.google.code.gson:gson:2.8.0">
+    <archive path="/home/c14795/.m2/repository/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar" />
+  </library>
+</eclipse-userlibraries>
+

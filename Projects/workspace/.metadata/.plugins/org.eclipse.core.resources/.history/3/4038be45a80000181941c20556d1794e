@@ -1,0 +1,17 @@
+package com.company;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public class RestConnector {
+
+	@WebMethod(action ="/hello")
+	String getCountryCode(String something)
+	{
+		String countryCode = "IN";
+		
+		return countryCode;
+	}
+	
+}

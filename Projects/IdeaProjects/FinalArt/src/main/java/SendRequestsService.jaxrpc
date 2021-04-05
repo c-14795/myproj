@@ -1,0 +1,96 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebService xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webservice">
+   <list n="CHILD_NODES">
+      <url path="SendRequests.java"/>
+      <url path="SendRequestsPortType.java"/>
+      <url path="../../../../../public_html/WEB-INF/wsdl/SendRequestsService.wsdl"/>
+      <url path="../../../../../public_html/WEB-INF/SendRequestsService-java-wsdl-mapping.xml"/>
+      <url path="SendRequestsPortType.java"/>
+      <url path="SendRequestsPortType.java"/>
+      <url path="SendRequestsPortType.java"/>
+      <url path="SendRequestsPortType.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MTOM"/>
+      <list n="BD_">
+         <hash>
+            <value n="BOUND_PORT_TYPE" v="{USE_OWNER_TNS}SendRequests"/>
+            <value n="DEFAULT_NAME" v="true"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+            <value n="NAME" v="{USE_OWNER_TNS}SendRequests"/>
+            <list n="OP_BINDINGS">
+               <hash>
+                  <value n="BOUND_OPERATION" v="java.lang.String.getXmlData.java.lang.String.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash>
+                  <value n="BOUND_OPERATION" v="java.lang.String.postData.java.lang.String.java.lang.String.java.lang.String.java.lang.String.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS"/>
+         </hash>
+      </list>
+      <list n="GENERATED_FILES"/>
+      <value n="GENERATION_OPTION" v="J2EE_ANNOTATIONS"/>
+      <value n="GUID" v="b477fddb-0161-1000-808d-c0a80204c1ac"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaWebService"/>
+      <list n="PO_">
+         <hash>
+            <value n="DEFAULT_NAME" v="true"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+            <value n="NAME" v="SendRequestsPort"/>
+            <value n="PORT_BINDING_NAME" v="{USE_OWNER_TNS}SendRequests"/>
+            <list n="PORT_OPS">
+               <hash>
+                  <value n="EXPOSED_BD_OPERATION" v="java.lang.String.getXmlData.java.lang.String.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash>
+                  <value n="EXPOSED_BD_OPERATION" v="java.lang.String.postData.java.lang.String.java.lang.String.java.lang.String.java.lang.String.java.lang.String"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </list>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WLS_POLICY_MODEL">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.WlsPolicyModel"/>
+               </hash>
+            </hash>
+            <url n="URL" protocol="http" host="localhost" port="7101" path="/HttpGETSampleApp-GETBTIntegrationAPIProxy-context-root/SendRequestsService"/>
+         </hash>
+      </list>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="ADD_ANNOTATIONS">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.AnnotationProperties"/>
+         </hash>
+         <hash n="WLS_JAXRPC_STATEFUL_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WLSJaxrpcStatefulProperties"/>
+            <list n="START_OPERATIONS">
+               <string v="getXmlData"/>
+               <string v="postData"/>
+            </list>
+            <value n="STATEFUL_ENABLED" v="false"/>
+         </hash>
+      </hash>
+      <list n="PT_">
+         <hash>
+            <value n="AUTO_SERVICE_INTERFACE" v="com.timex.bt.integration.SendRequestsPortType"/>
+            <value n="DEFAULT_NAME" v="true"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+            <value n="NAME" v="{USE_OWNER_TNS}SendRequests"/>
+            <hash n="PROPERTY_GROUPS"/>
+            <value n="PT_CLASS" v="com.timex.bt.integration.SendRequests"/>
+         </hash>
+      </list>
+      <url n="TARGET_PROJECT" path="../../../../../GETBTIntegrationAPIProxy.jpr"/>
+      <list n="WS_DEPENDENT_VALUE_TYPES"/>
+      <value n="WS_ORIG_GEN_DIRECTION" v="BOTTOM_UP"/>
+      <value n="WS_TARGET_NAMESPACE" v="http://com.timex.bt.integration/"/>
+      <value n="WS_URI" v="SendRequestsService"/>
+      <url n="WS_WSDL_FILE" path="../../../../../public_html/WEB-INF/wsdl/SendRequestsService.wsdl"/>
+   </hash>
+</jdevws:WebService>

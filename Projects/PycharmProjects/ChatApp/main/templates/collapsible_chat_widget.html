@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <!--link rel="stylesheet" type="text/css" href="chatStyle.css"-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='chatStyle.css') }}">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="{{ url_for('static', filename='chatEssentials.js') }}"></script>
+    <script src="{{ url_for('static', filename='drag.js') }}"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<style>
+    #d {
+    position: absolute;
+    z-index: 9;
+}
+
+#dheader {
+    padding: 10px;
+    cursor: move;
+}
+</style>
+</head>
+<body>
+<div id="d">
+    <div id="dheader" class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" id="accordion">
+                        <span class="glyphicon glyphicon-comment"></span> Chat
+                        <div class="btn-group pull-right">
+                            <a type="button" class="btn btn-default btn-xs" data-toggle="collapse"
+                               data-parent="#accordion"
+                               href="#collapseOne">
+                                <span class="glyphicon glyphicon-chevron-down"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel-collapse collapse" id="collapseOne">
+                        <div class="panel-body">
+                            <ul class="chat" id="chatbox">
+                                <li class="left clearfix"><span class="chat-img pull-left">
+                            <img src="http://placehold.it/50/55C1E7/fff&text=ME" alt="User Avatar" class="img-circle"/>
+                        </span>
+                                    <div class="chat-body clearfix">
+                                        <div class="header">
+                                            <strong class="primary-font">Assistant</strong>
+                                            <small class="pull-right text-muted">
+                                                <span class="glyphicon glyphicon-time"></span>
+                                                <script>document.write(new Date())</script>
+                                            </small>
+                                        </div>
+                                        <p>
+                                            Hello.... Start by typing your query!!!
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm"
+                                       placeholder="Type your message here..."/>
+                                <span class="input-group-btn">
+                            <button class="btn btn-warning btn-sm" id="btn-chat">
+                                Send</button>
+                        </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
