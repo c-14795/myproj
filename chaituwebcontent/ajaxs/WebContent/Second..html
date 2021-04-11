@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+function validate(email)
+{
+	var xmlhttp;
+	if(window.XMLHttpRequest)
+		xmlhttp=new XMLHttpRequest();
+	else
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp.open("GET", "second?email="+email, true);
+	xmlhttp.send();
+	
+		xmlhttp.onreadystatechange=function()
+		{
+			if(xmlhttp.readyState==4&&xmlhttp.status==200)
+				document.getElementById("error").innerHTML=xmlhttp.responseText;
+		}
+	}
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<form action="#" name="form">
+<label>EmailID</label><input type="text" onblur="validate(this.value)" autofocus="autofocus" name="Email"><span id="error"></span><br />
+<button type="button">submit</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function check()
+{
+	alert("invoked");
+	var s=document.getElementById("se").value;
+	var xmlhttp;
+	if (window.XMLHttpRequest)
+		xmlhttp = new XMLHttpRequest();
+	else
+		xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+	var url="five?states="+s;
+	alert(url);
+	xmlhttp.open("GET", url, true);
+	
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if(xmlhttp.readyState==4)
+			document.getElementById("display").innerHTML=xmlhttp.responseText;
+		
+	}
+	
+	}
+</script>
+</head>
+<body>
+<select onchange="check()" id="se">
+<option disabled selected>--select a value--</option>
+<option id="ap" value="ap" >AndhraPradesh</option>
+<option id="mh" value="mh">Maharastra</option>
+<option id="ka" value="ka">Karnataka</option>
+<option id="tn" value="tn">Tamilnadu</option>
+<option id="ke" value="ke">kerla</option>
+</select>
+<p id="display"></p>
+</body>
+</html>

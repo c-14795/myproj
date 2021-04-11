@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/hibernate-3.6.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/hibernate-commons-annotations.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/hibernate-jpa-2.0-api-1.0.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/hibernate-validator-4.0.2.GA.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/javassist.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/slf4j-log4j12-1.7.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/user/Desktop/team25/hibernate_jars/antlr-2.7.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

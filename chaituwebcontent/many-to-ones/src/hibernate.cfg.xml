@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"=//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+<property name="connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+<property name="connection.username">B40408322821</property>
+<property name="connection.password">B40408322821</property>
+<property name="hibernate.show_sql">true</property>
+<property name="connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+<mapping resource="child.hbm.xml"/>
+<mapping resource="parent.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>

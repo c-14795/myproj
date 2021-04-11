@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+function time()
+{
+	var xmlhttp;
+	if(window.XMLHttpRequest)
+		xmlhttp=new XMLHttpRequest();
+	else
+		xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+	
+		xmlhttp.onreadystatechange=function()
+		{
+			if(xmlhttp.readyState==4&&xmlhttp.status==200)
+				document.getElementById("time").innerHTML=xmlhttp.responseText;
+		}
+		var url="first";
+		url += '?_=';
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+	}
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+Ajax First Handson
+<span>click the button to get the time</span>
+<br />
+<span id="time">time will be displayed</span>
+<br />
+<button type="button" onclick="time()">click here</button>
+</body>
+</html>

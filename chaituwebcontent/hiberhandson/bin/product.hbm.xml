@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="product" table="product">
+		<id name="productid" column="productid">
+			<generator class="sequence">
+			<param name="sequence">myseq</param>
+			</generator>
+		</id>
+		<property name="name" column="name"></property>
+		<property name="price" column="price"></property>
+	</class>
+</hibernate-mapping>

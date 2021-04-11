@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+var xmlhttp;
+function suggest(cname) {
+if(window.XMLHttpRequest)
+	xmlhttp=new XMLHttpRequest();
+else
+	xmlhttp= new ActiveXObject("Microsoft.XMLHTTP");
+	xmlhttp.open("GET", "cities?cname="+cname, true);
+	xmlhttp.send();
+	xmlhttp.onreadystatechange=function()
+	{
+		if(xmlhttp.readyState==4&&xmlhttp.status==200)
+			{
+				document.getElementById("display").innerHTML=xmlhttp.responseText;
+			}
+	}
+}
+
+	
+
+</script>
+<title>Insert title here</title>
+</head>
+<body>
+<input type="text" name="cityname" onkeypress="suggest(this.value)" onkeydown="suggest(this.value)"onkeyup="suggest(this.value)"><br />
+Suggestions:<br />
+<span id="display"></span>
+</body>
+</html>

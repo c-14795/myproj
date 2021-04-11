@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function calcuate() {
+		var xmlhttp;
+		if (window.XMLHttpRequest)
+			xmlhttp = new XMLHttpRequest();
+		else
+			xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		var url = "third?principal=" + document.forms["f"]["P"].value
+				+ "&Interest=" + document.forms["f"]["i"].value + "&time="
+				+ document.forms["f"]["t"].value;
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		xmlhttp.onreadystatechange = function() {
+			if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+				
+				document.getElementById("amount").innerHTML=xmlhttp.responseText;
+				//document.getElementById("ajaxform").submit()
+			
+			}
+
+		}
+		return false;
+	}
+</script>
+</head>
+<body>
+	<form name="f">
+		Principle<input type="text" name="P"> Rate Of Interest<input
+			type="text" name="i"> Time<input type="text" name="t">
+		<input type="submit" value="calculate" onclick="return calcuate()" >
+	</form>
+	Amount
+	<div id="amount"></div>
+</body>
+</html>

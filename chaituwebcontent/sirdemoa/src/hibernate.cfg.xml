@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+<!--Oracle dialect -->
+<property name="hibernate.dialect">org.hibernate.dialect.OracleDialect</property>
+<!--Database connection settings -->
+<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521:xe</property>
+<property name="hibernate.connection.username">B40408322821</property>
+<property name="hibernate.connection.password">B40408322821</property>
+<!--Echo all executed SQL to stdout -->
+<property name="hibernate.show_sql">true</property>
+<!--Enable Hibernate's automatic session context management -->
+<property name="hibernate.current_session_context_class">thread</property>
+<!-- Mapping file entry -->
+<mapping resource="Student.hbm.xml"/>
+</session-factory>
+</hibernate-configuration>
